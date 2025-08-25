@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service & Privacy Policy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
+      padding: 40px 0;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      animation: slideDown 0.8s ease-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .nav-pills {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .nav-pill {
+      padding: 12px 24px;
+      background: linear-gradient(45deg, #6366f1, #8b5cf6);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+    }
+
+    .nav-pill:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+      background: linear-gradient(45deg, #4f46e5, #7c3aed);
+    }
+
+    .main-title {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 15px;
+      animation: fadeIn 1s ease-out 0.3s both;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #64748b;
+      font-weight: 400;
+      animation: fadeIn 1s ease-out 0.5s both;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .content-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 30px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: slideUp 0.8s ease-out;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .content-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 30px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #6366f1, #8b5cf6);
+      border-radius: 2px;
+    }
+
+    .subsection-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #475569;
+      margin: 30px 0 15px 0;
+      padding-left: 20px;
+      border-left: 4px solid #6366f1;
+      position: relative;
+    }
+
+    .subsection-title::before {
+      content: '●';
+      color: #6366f1;
+      position: absolute;
+      left: -12px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 0.7;
+        transform: scale(1.1);
+      }
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+      color: #475569;
+    }
+
+    ul {
+      margin: 15px 0 25px 0;
+      padding-left: 0;
+    }
+
+    li {
+      list-style: none;
+      padding: 12px 0 12px 40px;
+      position: relative;
+      font-size: 1.05rem;
+      color: #475569;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+    }
+
+    li:hover {
+      background: rgba(99, 102, 241, 0.05);
+      padding-left: 50px;
+    }
+
+    li::before {
+      content: '✓';
+      position: absolute;
+      left: 15px;
+      color: #10b981;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    a {
+      color: #6366f1;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background: linear-gradient(90deg, #6366f1, #8b5cf6);
+      transition: width 0.3s ease;
+    }
+
+    a:hover::after {
+      width: 100%;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      border-radius: 15px;
+      padding: 25px;
+      margin: 25px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .highlight-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    }
+
+    .divider {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #6366f1, #8b5cf6, transparent);
+      margin: 50px 0;
+      border: none;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      font-size: 0.95rem;
+      color: #64748b;
+      margin-top: 40px;
+    }
+
+    .contact-section {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(34, 197, 94, 0.1));
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      border-radius: 15px;
+      padding: 25px;
+      margin: 25px 0;
+      text-align: center;
+    }
+
+    .contact-section a {
+      display: inline-block;
+      background: linear-gradient(45deg, #10b981, #22c55e);
+      color: white;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: 600;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+    }
+
+    .contact-section a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+    }
+
+    .contact-section a::after {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .main-title {
+        font-size: 2.2rem;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      .content-card {
+        padding: 25px;
+      }
+      
+      .nav-pills {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .container {
+        padding: 20px 15px;
+      }
+    }
+
+    /* Scroll animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="nav-pills">
+        <a href="#terms" class="nav-pill">📋 Terms</a>
+        <a href="#privacy" class="nav-pill">🔒 Privacy</a>
+      </div>
+      <h1 class="main-title">Legal Documents</h1>
+      <p class="subtitle">Clear, transparent policies for our gaming community</p>
+    </div>
+
+    <div class="content-card" id="terms">
+      <h2 class="section-title">Terms of Service</h2>
+      <div class="highlight-box">
+        <p><strong>Welcome to our gaming platform!</strong> By downloading or playing our games, you agree to these terms. If you do not agree, please discontinue use of our services.</p>
+      </div>
+      
+      <h3 class="subsection-title">1. Access & Usage</h3>
+      <p>You may download and play our games on your personal device for entertainment purposes.</p>
+      
+      <h3 class="subsection-title">2. Account Management</h3>
+      <p>If an account is required, please ensure you:</p>
+      <ul>
+        <li>Use a valid email address and create a strong password</li>
+        <li>Keep your login credentials private and secure</li>
+        <li>Take responsibility for all activity under your account</li>
+      </ul>
+      
+      <h3 class="subsection-title">3. Fair Play Guidelines</h3>
+      <p>To maintain a positive gaming environment, we prohibit:</p>
+      <ul>
+        <li>Hacking, cheating, or exploiting game vulnerabilities</li>
+        <li>Harassment, bullying, or offensive behavior toward other players</li>
+        <li>Sharing illegal, copyrighted, or inappropriate content</li>
+      </ul>
+      
+      <h3 class="subsection-title">4. In-App Purchases</h3>
+      <div class="highlight-box">
+        <p>Some games may offer optional purchases to enhance your experience. All prices include applicable taxes where required.</p>
+        <ul>
+          <li>All purchases are final unless required by law or app store policy</li>
+          <li>Subscriptions can be cancelled through your app store settings</li>
+        </ul>
+      </div>
+      
+      <h3 class="subsection-title">5. Account Enforcement</h3>
+      <p>We reserve the right to suspend or terminate accounts that violate these terms. Suspended users must immediately stop using our services.</p>
+      
+      <h3 class="subsection-title">6. Service Disclaimer</h3>
+      <p>Our games are provided "as is." While we strive to deliver an excellent experience, we cannot guarantee uninterrupted or error-free service.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="content-card" id="privacy">
+      <h2 class="section-title">Privacy Policy</h2>
+      <div class="highlight-box">
+        <p><strong>Your privacy is important to us.</strong> This policy explains what data we may collect and how it's used to improve your gaming experience.</p>
+      </div>
+      
+      <h3 class="subsection-title">Data We May Collect</h3>
+      <ul>
+        <li><strong>Precise Location</strong> – Used for personalized advertising experiences</li>
+        <li><strong>Approximate Location</strong> – Used for relevant ads and analytics insights</li>
+        <li><strong>Advertising ID</strong> – Used to deliver targeted advertisements</li>
+        <li>Device information for crash reports and performance monitoring</li>
+        <li>Gameplay activity to enhance features and user experience</li>
+        <li>Optional account details if you choose to register</li>
+      </ul>
+      
+      <h3 class="subsection-title">How We Use Your Data</h3>
+      <ul>
+        <li>Provide and continuously improve our gaming services</li>
+        <li>Deliver relevant advertising through trusted third-party networks</li>
+        <li>Monitor performance, detect crashes, and prevent service misuse</li>
+      </ul>
+      
+      <h3 class="subsection-title">Advertising & Personalization</h3>
+      <div class="highlight-box">
+        <p>Our games may include advertisements served by third-party partners. These partners may use collected data to deliver personalized or contextual ads. You can opt out of personalized advertising through your device settings.</p>
+      </div>
+      
+      <h3 class="subsection-title">Third-Party Services</h3>
+      <p>Some features rely on third-party providers such as app stores, analytics platforms, or advertising networks. Their respective privacy policies also apply to your data.</p>
+      
+      <div class="contact-section">
+        <h3 class="subsection-title">Questions? Contact Us</h3>
+        <p>If you have any questions about these policies, please reach out to us:</p>
+        <a href="mailto:brjdyxter@email.com">📧 brjdyxter@email.com</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>© 2025 Burger Maker. All rights reserved. • Designed with ❤️ for our community</p>
+    </div>
+  </div>
+
+  <script>
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all content cards
+    document.querySelectorAll('.content-card').forEach(card => {
+      card.classList.add('fade-in');
+      observer.observe(card);
+    });
+
+    // Add some interactive hover effects
+    document.querySelectorAll('.nav-pill').forEach(pill => {
+      pill.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-3px) scale(1.05)';
+      });
+      
+      pill.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+      });
+    });
+  </script>
+</body>
+</html>
